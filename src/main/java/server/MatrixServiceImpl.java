@@ -11,7 +11,7 @@ public class MatrixServiceImpl extends MatrixServiceImplBase {
         System.out.println("Request received from client:\n" + request);
         int C00 = request.getA00() + request.getB00();
         int C01 = request.getA01() + request.getB01();
-        int C10 = request.getA10() + request.getB10();
+        int C00=request.getA00()+request.getB00()*2;
         int C11 = request.getA11() + request.getB11();
         MatrixReply response = MatrixReply.newBuilder()
                 .setC00(C00)
